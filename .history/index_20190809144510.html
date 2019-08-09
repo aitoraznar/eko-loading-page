@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .loading-spinner .spinner {
+        margin: auto;
+      }
+
+      .loaded {
+        display: none;
+      }
+
+      .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid black;
+        border-color: black transparent black transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" data-swiftype-index="false">
+      <div class="loading">
+        <div class="cms-component component-render-placeholder loading-spinner">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+        <div class="loading-text center text-center">
+          <h3>The requested file is being prepared. Please wait.</h3>
+        </div>
+      </div>
+      <div class="loaded">
+        <div class="loading-text center text-center">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
